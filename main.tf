@@ -269,7 +269,7 @@ resource "azurerm_network_security_group" "vm" {
     protocol                   = "Tcp"
     source_port_range          = "*"
     destination_port_range     = coalesce(var.remote_port, module.os.calculated_remote_port)
-    source_address_prefix      = "*"
+    source_address_prefix      = var.allow_source_address_prefix
     destination_address_prefix = "*"
   }
 

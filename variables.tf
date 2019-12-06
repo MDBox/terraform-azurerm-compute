@@ -31,6 +31,11 @@ variable "remote_port" {
   default     = ""
 }
 
+variable "allow_source_address_prefix" {
+  default     = "*"
+}
+
+
 variable "admin_username" {
   description = "The admin username of the VM that will be deployed"
   default     = "azureuser"
